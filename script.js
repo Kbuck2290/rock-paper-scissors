@@ -13,10 +13,10 @@ const getHumanChoice = function() {
     let choice;
     do {
     choice = prompt("Make a choice of rock, paper or scissors"); 
-    if (choice === null) 
-        return "invalid response"; 
-    choice = choice.toLowerCase();  
-    } while (!(choice === "rock" || choice === "paper" || choice === "scissors")); 
+    if (choice !== null) {
+    choice = choice.toLowerCase();
+    }
+    } while ((choice === null) || !(choice === "rock" || choice === "paper" || choice === "scissors")); 
     return choice; 
 }; 
 
